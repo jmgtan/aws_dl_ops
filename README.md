@@ -44,7 +44,7 @@ This will create a DynamoDB table in the AWS account and region indicated by the
 Next is to create an entry using the following:
 
 ```
-./main.js -i -pr <principalArn> -c <level> -p <awsCLIprofile> -r <region>
+./main.js -pr <principalArn> -c <level> -p <awsCLIprofile> -r <region>
 ```
 
 The Principal ARN can be an IAM user or a role, and the level is based on the table above. This data would be compared to the column level confidentiality based on the tag `confidentiality_level` of the table column. Any level that is greater than the principal's configured level, the CLI will create a column level exclude permission for that principal.
