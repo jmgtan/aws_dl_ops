@@ -12,9 +12,14 @@ This CLI tool enables automated Lake Formation permission grant/revokes based on
 
 The higher the score, the higher the confidentiality of a column of data.
 
+## Requirements
+
+- The IAM user or [role](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-role.html) that must be used in conjunction with this tool must have [LakeFormation administrator privileges](https://docs.aws.amazon.com/lake-formation/latest/dg/getting-started-setup.html).
+- This tool uses node js, so you must have that installed to use this.
+
 ## Getting Started
 
-To get started, clone the repository and make sure that `main.js` has execute privileges by executing the following:
+To get started, clone the repository, run `npm install` and make sure that `main.js` has execute privileges by executing the following:
 
 ```
 chmod +x main.js
@@ -54,3 +59,5 @@ No Lake Formation permission has been granted/revoked at this stage, to synchron
 
 This will compare confidentiality levels between table and principal and then a series of grant/revoke permissions would be executed. The `tableName` parameter is optional, if that is ommitted, the tool would execute the synchronize command across all the tables in the database.
 
+### Automation
+This tool can be used in conjunction with [Glue Cloudwatch Events](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/EventTypes.html#glue-event-types) in response to schema/table updates, or DynamoDB stream events in response to confidentiality changes to a specific principal arn. The Lambda execution role must also have LakeFormation administrator privileges to be able to grant/revoke permissions accordingly.
