@@ -18,6 +18,9 @@
     "url": "https://github.com/jmgtan/aws_dl_ops/issues"
   },
   "homepage": "https://github.com/jmgtan/aws_dl_ops#readme",
+  "bin": {
+    "aws_dl_ops": "./main.js"
+  },
   "dependencies": {
     "array-chunk": "^1.0.0",
     "ascii-table": "0.0.9",
