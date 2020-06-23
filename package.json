@@ -1,0 +1,28 @@
+{
+  "name": "aws_dl_ops",
+  "version": "0.0.1",
+  "description": "AWS Data Lake Operations tool to automate common tasks",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmgtan/aws_dl_ops.git"
+  },
+  "keywords": [
+    "aws",
+    "lakeformation",
+    "datalake"
+  ],
+  "author": "Jan Tan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmgtan/aws_dl_ops/issues"
+  },
+  "homepage": "https://github.com/jmgtan/aws_dl_ops#readme",
+  "dependencies": {
+    "array-chunk": "^1.0.0",
+    "ascii-table": "0.0.9",
+    "aws-sdk": "^2.701.0",
+    "commander": "^5.1.0",
+    "uuid": "^8.1.0"
+  }
+}
