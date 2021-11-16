@@ -24,7 +24,7 @@
   "dependencies": {
     "array-chunk": "^1.0.0",
     "ascii-table": "0.0.9",
-    "aws-sdk": "^2.701.0",
+    "aws-sdk": "^2.814.0",
     "commander": "^5.1.0",
     "uuid": "^8.1.0"
   }
